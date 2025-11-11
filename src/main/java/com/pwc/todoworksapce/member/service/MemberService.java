@@ -4,7 +4,7 @@ import com.pwc.todoworksapce.member.controller.dto.RequestCreateMemberDto;
 import com.pwc.todoworksapce.member.controller.dto.ResponseCreateMemberDto;
 
 public interface MemberService {
-    ResponseCreateMemberDto saveMember(RequestCreateMemberDto dto);
+    ResponseCreateMemberDto createMember(RequestCreateMemberDto dto);
 
     void deleteMember(Long memberId);
 }

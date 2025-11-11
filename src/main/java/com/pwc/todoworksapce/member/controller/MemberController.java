@@ -21,7 +21,7 @@ public class MemberController {
     public ResponseEntity<ResponseCreateMemberDto> createMember(
             @RequestBody RequestCreateMemberDto requestCreateMemberDto
     ) {
-        ResponseCreateMemberDto responseCreateMemberDto = memberService.saveMember(requestCreateMemberDto);
+        ResponseCreateMemberDto responseCreateMemberDto = memberService.createMember(requestCreateMemberDto);
         return ResponseEntity.ok(responseCreateMemberDto);
     }
 

@@ -19,7 +19,7 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     @Transactional
-    public ResponseCreateMemberDto saveMember(RequestCreateMemberDto dto) {
+    public ResponseCreateMemberDto createMember(RequestCreateMemberDto dto) {
         if (memberRepository.existsByUsername(dto.username())) {
             throw new CustomException("이미 존재하는 사용자 이름입니다.");
         }
