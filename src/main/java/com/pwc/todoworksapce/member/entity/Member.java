@@ -1,7 +1,7 @@
 package com.pwc.todoworksapce.member.entity;
 
 import com.pwc.todoworksapce.base.BaseEntity;
-import com.pwc.todoworksapce.member.Role;
+import com.pwc.todoworksapce.member.entity.role.Role;
 import jakarta.persistence.*;
 import lombok.Getter;
 
