@@ -2,7 +2,7 @@ package com.pwc.todoworksapce.member.controller.dto;
 
 import java.time.LocalDateTime;
 
-public record ResponseMemberDto(
+public record ResponseCreateMemberDto(
         Long id,
         String username,
         String nickname,

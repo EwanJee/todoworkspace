@@ -1,8 +1,8 @@
 package com.pwc.todoworksapce.member.controller;
 
 import com.pwc.todoworksapce.member.service.MemberService;
-import com.pwc.todoworksapce.member.controller.dto.RequestMemberDto;
-import com.pwc.todoworksapce.member.controller.dto.ResponseMemberDto;
+import com.pwc.todoworksapce.member.controller.dto.RequestCreateMemberDto;
+import com.pwc.todoworksapce.member.controller.dto.ResponseCreateMemberDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -18,11 +18,11 @@ public class MemberController {
 
     @PostMapping("")
     @Operation(summary = "일반 사용자 생성")
-    public ResponseEntity<ResponseMemberDto> createMember(
-            @RequestBody RequestMemberDto requestMemberDto
+    public ResponseEntity<ResponseCreateMemberDto> createMember(
+            @RequestBody RequestCreateMemberDto requestCreateMemberDto
     ) {
-        ResponseMemberDto responseMemberDto = memberService.saveMember(requestMemberDto);
-        return ResponseEntity.ok(responseMemberDto);
+        ResponseCreateMemberDto responseCreateMemberDto = memberService.saveMember(requestCreateMemberDto);
+        return ResponseEntity.ok(responseCreateMemberDto);
     }
 
     @DeleteMapping("/{memberId}")

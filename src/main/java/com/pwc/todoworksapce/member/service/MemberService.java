@@ -1,10 +1,10 @@
 package com.pwc.todoworksapce.member.service;
 
-import com.pwc.todoworksapce.member.controller.dto.RequestMemberDto;
-import com.pwc.todoworksapce.member.controller.dto.ResponseMemberDto;
+import com.pwc.todoworksapce.member.controller.dto.RequestCreateMemberDto;
+import com.pwc.todoworksapce.member.controller.dto.ResponseCreateMemberDto;
 
 public interface MemberService {
-    ResponseMemberDto saveMember(RequestMemberDto dto);
+    ResponseCreateMemberDto saveMember(RequestCreateMemberDto dto);
 
     void deleteMember(Long memberId);
 }

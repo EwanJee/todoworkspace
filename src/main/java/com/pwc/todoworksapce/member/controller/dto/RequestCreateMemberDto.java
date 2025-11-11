@@ -1,6 +1,6 @@
 package com.pwc.todoworksapce.member.controller.dto;
 
-public record RequestMemberDto(
+public record RequestCreateMemberDto(
         String username,
         String password,
         String nickname
