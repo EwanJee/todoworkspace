@@ -1,7 +1,8 @@
 package com.pwc.todoworksapce.member.entity;
 
 import com.pwc.todoworksapce.base.BaseEntity;
-import com.pwc.todoworksapce.member.entity.role.Role;
+import com.pwc.todoworksapce.member.entity.enums.Department;
+import com.pwc.todoworksapce.member.entity.enums.Role;
 import jakarta.persistence.*;
 import lombok.Getter;
 
@@ -24,12 +25,17 @@ public class Member extends BaseEntity {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
+    private Department department;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private Role role;
 
-    public Member(String username, String password, String nickname) {
+    public Member(String username, String password, String nickname, Department department) {
         this.username = username;
         this.password = password;
         this.nickname = nickname;
+        this.department = department;
         this.role = Role.USER;
     }
 
