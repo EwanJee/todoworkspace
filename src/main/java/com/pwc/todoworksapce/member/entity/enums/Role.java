@@ -1,4 +1,4 @@
-package com.pwc.todoworksapce.member.entity.role;
+package com.pwc.todoworksapce.member.entity.enums;
 
 /**
  * 사용자 역할 정의
