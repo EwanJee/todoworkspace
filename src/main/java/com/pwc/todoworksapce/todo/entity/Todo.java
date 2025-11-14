@@ -55,7 +55,7 @@ public class Todo extends BaseEntity {
     @Column(nullable = false)
     private boolean isCompleted = false;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private LocalDateTime dueDate;
 
     @Enumerated(EnumType.STRING)
@@ -74,9 +74,12 @@ public class Todo extends BaseEntity {
     /**
      * D-Day
      *
-     * @return 남은 일수 (음수는 마감일이 지난 경우)
+     * @return 남은 일수 (음수는 마감일이 지난 경우), dueDate가 null이면 null 반환
      */
-    public int getRemainingDays() {
+    public Integer getRemainingDays() {
+        if (dueDate == null) {
+            return null;
+        }
         LocalDateTime now = LocalDateTime.now();
         return (int) Duration.between(now, dueDate).toDays();
     }

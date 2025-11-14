@@ -16,12 +16,11 @@ public record RequestCreateTodoDto(
         @NotBlank(message = "제목은 필수입니다.")
         String title,
         String content,
-        @NotNull(message = "마감일은 필수입니다.")
         LocalDateTime dueDate,
         List<String> tagNames,
         Visibility visibility,
         @DecimalMin(value = "1", message = "우선순위는 1 이상이어야 합니다.")
         BigDecimal priority
-) {
+        ) {
 
 }

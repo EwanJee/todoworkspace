@@ -14,7 +14,7 @@ public record ResponseTodoDto(
         String content,
         boolean isCompleted,
         LocalDateTime dueDate,
-        int remainingDays,
+        Integer remainingDays,
         Visibility visibility,
         BigDecimal priority,
         List<String> tagNames,
