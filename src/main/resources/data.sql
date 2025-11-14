@@ -1,11 +1,11 @@
 -- Members 더미 데이터
-INSERT IGNORE INTO members (username, password, nickname, department, role, created_at, updated_at, deleted_at)
+INSERT IGNORE INTO members (id, username, password, nickname, department, role, created_at, updated_at, deleted_at)
 VALUES
-    ('user0', 'password', 'John', 'IT', 'USER', NOW(), NOW(), NULL),
-    ('user1', 'password', 'Jane', 'HR', 'ADMIN', NOW(), NOW(), NULL),
-    ('user2', 'password', 'Alice', 'CONSULTING', 'USER', NOW(), NOW(), NULL),
-    ('user3', 'password', 'Bob', 'FINANCE', 'USER', NOW(), NOW(), NULL),
-    ('user4', 'password', 'Charlie', 'AUDIT', 'USER', NOW(), NOW(), NULL);
+    (1, 'user0', 'password', 'John', 'IT', 'USER', NOW(), NOW(), NULL),
+    (2, 'user1', 'password', 'Jane', 'HR', 'ADMIN', NOW(), NOW(), NULL),
+    (3, 'user2', 'password', 'Alice', 'CONSULTING', 'USER', NOW(), NOW(), NULL),
+    (4, 'user3', 'password', 'Bob', 'FINANCE', 'USER', NOW(), NOW(), NULL),
+    (5, 'user4', 'password', 'Charlie', 'AUDIT', 'USER', NOW(), NOW(), NULL);
 
 -- Tags 더미 데이터
 INSERT IGNORE INTO tags (id, member_id, name, created_at, updated_at, deleted_at)
