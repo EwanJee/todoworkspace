@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-@RequiredArgsConstructor
+@RequiredArgsConstructor(access = lombok.AccessLevel.PROTECTED)
 @Transactional(readOnly = true)
 public class MemberServiceImpl implements MemberService {
 
